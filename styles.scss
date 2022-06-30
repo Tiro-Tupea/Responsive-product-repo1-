@@ -1,0 +1,166 @@
+$color-primary: hsl(158, 36%, 37%);
+$color-secondary: hsl(30, 38%, 92%);
+$neutral-primary: hsl(212, 21%, 14%);
+$neutral-secondary: hsl(228, 12%, 48%);
+$neutral: white;
+$fontFraunces: 'Fraunces', serif;
+$fontMonserrat: 'Montserrat', sans-serif;
+
+
+
+/*--Genral--*/
+* {box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+    height: 100%;
+}   
+
+body {
+    font-size: 14px;
+    background-color: $color-secondary;
+}
+
+/*--id/Classe--*/
+
+.main-cart {
+    
+    width: 620px;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+   
+    
+    
+}
+
+.img-cart  img{
+    width: 300px;
+    height: 480px;
+    border-radius: 15px 0 0 15px;
+}
+
+.text-cart {
+    background-color: $neutral;
+    border-radius: 0 15px 15px 0;
+    padding: 15px 30px 30px 30px;
+
+
+    h1 {
+        font-family: $fontFraunces;
+        font-size: 35px;
+    }
+
+
+    h4 {
+        color: $neutral-secondary;
+        font-family: $fontMonserrat;
+        font-weight: 100;
+        letter-spacing: 8px;
+    }
+
+    p {
+        font-family: $fontMonserrat;
+        color: $neutral-secondary;
+        text-align: left;
+        font-size: 14px;
+    }
+
+}
+
+.price-cart {
+    display: block;
+
+    h1 {
+        color: $color-primary;
+        font-size: 30px;
+    }
+
+    span {
+        font-family: $fontMonserrat;
+        font-weight: 500;
+        text-decoration: line-through;
+        color: $neutral-secondary;
+        float: right;
+        position: relative;
+        bottom: 48px;
+        right: 70px;
+    }
+}
+
+.button-cart button{ 
+    width: 260px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: $color-primary;
+
+    img {
+        position: relative;
+        top: 4px;
+        right: 5px;
+    }
+
+    a {
+        color: $neutral;
+        text-decoration: none;
+        font-family: $fontMonserrat;
+        font-weight: 700;
+    }
+}
+
+.button-cart button:hover, .button-cart button:active {
+    background-color: hsl(158, 86%, 14%);
+    cursor: pointer;
+}
+
+/*--MOBILE--*/
+
+@media screen and (max-width: 650px){
+
+    html {
+        width: 375px;
+        box-sizing: inherit;
+    }
+
+
+    .main-cart {
+        width: 350px;
+        height: 600px;
+        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .img-cart img{
+        content: url(images/image-product-mobile.jpg) ;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 3px
+        
+    }
+
+    .text-cart { 
+        max-width: 100%;
+        height: 60%;
+        height: auto;
+        border-radius: 0 0 10px 10px;
+
+
+    }
+
+    .button-cart button {
+        width: 100%;
+    }
+
+}
